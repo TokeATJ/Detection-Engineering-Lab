@@ -27,7 +27,7 @@ The objective of this project was to gain hands-on experience with SIEM operatio
 - Security Investigation Workflows
 ---
 
-**First, lets confirm Data Source**
+## First, lets confirm our data sources**
 
 Verify we are connected to the correct logs through Splunk
 
