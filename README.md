@@ -32,14 +32,10 @@ The following processes were executed on the Windows endpoint:
 ```cmd
 notepad.exe
 calc.exe
-whoami
+cmd.exe / c whoami
 ```
-**Notepad.exe OR Calc.exe**
-<img width="1996" height="439" alt="image" src="https://github.com/user-attachments/assets/2b18a389-f1f6-4ad6-879d-d2f7ec304768" />
-
-**Whoami**
-
-<img width="716" height="177" alt="image" src="https://github.com/user-attachments/assets/65fb20ad-453c-4087-8458-61619c7093bb" />
+**Notepad.exe OR Calc.exe OR whoami**
+<img width="886" height="114" alt="image" src="https://github.com/user-attachments/assets/fbca3a47-e61e-483d-a988-2676d66156f9" />
 
 
 ### Splunk Investigation
@@ -51,7 +47,13 @@ notepad.exe OR calc.exe OR whoami
 
 ### Results
 
-<img width="931" height="425" alt="image" src="https://github.com/user-attachments/assets/f9e09b34-337a-466d-99db-4b3a32618d43" />
+**WhoAMI**
+
+<img width="944" height="418" alt="image" src="https://github.com/user-attachments/assets/07963b89-0dcb-45b1-b36e-2babc7cd448c" />
+
+**Notepad.exe & Calc.exe**
+
+<img width="746" height="341" alt="image" src="https://github.com/user-attachments/assets/7f306b86-caa2-4d0c-96b6-9dc8ffadc20c" />
 
 The executed processes were successfully identified within Splunk, confirming that Sysmon process creation events were collected and available for threat hunting and incident response workflows.
 
