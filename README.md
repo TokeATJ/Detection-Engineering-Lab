@@ -55,6 +55,8 @@ notepad.exe OR calc.exe OR whoami
 
 <img width="746" height="341" alt="image" src="https://github.com/user-attachments/assets/7f306b86-caa2-4d0c-96b6-9dc8ffadc20c" />
 
+### Findings
+
 The executed processes were successfully identified within Splunk, confirming that Sysmon process creation events were collected and available for threat hunting and incident response workflows.
 
 ### MITRE ATT&CK
