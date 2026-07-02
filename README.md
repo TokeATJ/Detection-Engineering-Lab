@@ -61,6 +61,8 @@ The executed processes were successfully identified within Splunk, confirming th
 
 - T1059.003 Windows Command Shell
 
+---
+
 ### Use Case 2: Network Connection Monitoring
 
 A Kali Linux VM was used to simulate an external attacker performing reconnaissance against a Windows 10 endpoint. The objective was to generate network activity that could be investigated within Splunk using Sysmon telemetry.
@@ -97,6 +99,7 @@ Search:
 index=main "10.0.2.15"
 ```
 **Splunk**
+
 <img width="624" height="224" alt="image" src="https://github.com/user-attachments/assets/f4dadcfd-370b-4c85-ba2c-2698faffd4f9" />
 
 ### Findings
@@ -105,9 +108,9 @@ Splunk returned events containing the Kali Linux IP address (`10.0.2.15`), demon
 
 ### MITRE ATT&CK Mapping
 
-| Network Service Discovery | T1046 |
+ T1046 - Network Service Discovery
 
-
+---
 
 ### Use Case 3: DNS Query Monitoring
 
