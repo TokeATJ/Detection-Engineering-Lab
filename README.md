@@ -185,7 +185,6 @@ PowerShell execution activity was successfully identified within Splunk using Sy
 ### MITRE ATT&CK
 
 - T1059.001 - PowerShell
-- 
 ---
 
 ### Use Case 5: Encoded PowerShell Detection
@@ -196,11 +195,29 @@ Detect obfuscated PowerShell execution and encoded commands.
 
 
 
+
+
+<img width="1238" height="495" alt="image" src="https://github.com/user-attachments/assets/488c1225-84fc-4a15-b64f-80e8d8cd432e" />
+
+
+
+
+
+
+### MITRE ATT&CK
+- T1059.001 - PowerShell
+- T1027 - Obfuscated Files or Information
+
 ### Use Case 6: LOLBIN Abuse (certutil.exe)
 
 ### Objective
 
  Detect abuse of trusted Windows binaries used to evade security controls.
+
+### MITRE ATT&CK
+
+- T1218 - System Binary Proxy Execution
+- T1105 - Ingress Tool Transfer
 
 ### Use Case 7: Credential Access Discovery
 
